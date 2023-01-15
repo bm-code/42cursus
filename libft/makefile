@@ -1,0 +1,33 @@
+NAME = libft.a
+
+CC = gcc
+
+FLAGS = -Wall -Werror -Wextra
+
+#Function names
+SRC = ft_isalpha.c ft_isalnum.c ft_isdigit.c ft_isascii.c ft_isprint.c ft_strlen.c ft_memset.c ft_bzero.c ft_memcpy.c ft_memmove.c ft_strlcpy.c ft_strlcat.c
+
+OBJ = $(SRC:.c=.o)
+
+all: $(NAME)
+
+%.o:%.c
+	$(CC) $(FLAGS) -c -o $@ $<
+$(NAME): $(OBJ)
+	@ar src $(NAME) $(OBJ)
+	@echo "Compilado"
+
+clean:
+	@rm -rf $(OBJ) $(BONUS)
+	@echo "Eliminado"
+
+re: fclean all
+
+bonus: $(NAME) 
+	@ar src $(NAME) $(OBJ)
+
+fclean: clean
+	@rm -f $(NAME)
+	@echo "Eiminado $(NAME)"
+
+.PHONY: all clean fclean re bonus
