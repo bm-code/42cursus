@@ -3,36 +3,38 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bmorales <bmorales@student.42malaga.com>   +#+  +:+       +#+        */
+/*   By: bmorales <benito@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/15 18:32:12 by bmorales          #+#    #+#             */
-/*   Updated: 2023/01/15 18:40:30 by bmorales         ###   ########.fr       */
+/*   Updated: 2023/02/22 11:57:38 by bmorales         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *str1, const void *str2, size_t n)
+void	*ft_memmove(void *dest, const void *src, size_t len)
 {
 	size_t	i;
 
 	i = 0;
-	if (!str1 && !str2)
-		return (0);
-	if (str1 > str2)
+	if (!dest && !src)
 	{
-		while (n-- > 0)
+		return (0);
+	}
+	if (dest > src)
+	{
+		while (len-- > 0)
 		{
-			((unsigned char *)str1)[n] = ((unsigned char *)str2)[n];
+			((unsigned char *)dest)[len] = ((unsigned char *) src)[len];
 		}
 	}
 	else
 	{
-		while (i < n)
+		while (i < len)
 		{
-			((unsigned char *)str1)[i] = ((unsigned char *)str2)[i];
+			((unsigned char *)dest)[i] = ((unsigned char *) src)[i];
 			i++;
 		}
 	}
-	return (str1);
+	return (dest);
 }

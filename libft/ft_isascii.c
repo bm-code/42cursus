@@ -3,16 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bmorales <bmorales@student.42malaga.com>   +#+  +:+       +#+        */
+/*   By: bmorales <benito@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/15 17:57:13 by bmorales          #+#    #+#             */
-/*   Updated: 2023/01/15 18:05:21 by bmorales         ###   ########.fr       */
+/*   Updated: 2023/02/22 11:55:04 by bmorales         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isascii(int n)
+#include "libft.h"
+
+int	ft_isascii(int c)
 {
-	if (n >= 0 && n <= 127)
+	if (c >= 0 && c <= 127)
 		return (1);
-	return (0);
+	else
+		return (0);
 }

@@ -6,11 +6,11 @@
 /*   By: bmorales <benito@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 12:32:16 by bmorales          #+#    #+#             */
-/*   Updated: 2023/01/27 12:32:26 by bmorales         ###   ########.fr       */
+/*   Updated: 2023/02/22 11:58:43 by bmorales         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libc.h"
+#include "libft.h"
 
 void	ft_putendl_fd(char *s, int fd)
 {

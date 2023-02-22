@@ -6,7 +6,7 @@
 /*   By: bmorales <benito@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 12:05:49 by bmorales          #+#    #+#             */
-/*   Updated: 2023/01/27 12:21:23 by bmorales         ###   ########.fr       */
+/*   Updated: 2023/02/22 11:53:57 by bmorales         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,8 @@
 void	*ft_calloc(size_t count, size_t size)
 {
 	void	*ptr;
-	size_t	i;	
+	size_t	i;
+
 	if (count == 0 || size == 0)
 	{
 		count = 1;
@@ -31,5 +32,4 @@ void	*ft_calloc(size_t count, size_t size)
 		i++;
 	}
 	return (ptr);
-	}
-	
+}

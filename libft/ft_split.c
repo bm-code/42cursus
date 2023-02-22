@@ -6,7 +6,7 @@
 /*   By: bmorales <benito@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 12:26:25 by bmorales          #+#    #+#             */
-/*   Updated: 2023/01/27 12:26:45 by bmorales         ###   ########.fr       */
+/*   Updated: 2023/02/22 12:00:00 by bmorales         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,11 +59,11 @@ char	**ft_split(char const *s, char c)
 	i = 0;
 	j = 0;
 	index = -1;
-	while (i <= ft_strlen(s))
+	while (i <= (size_t)ft_strlen(s))
 	{
 		if (s[i] != c && index < 0)
 			index = i;
-		else if ((s[i] == c || i == ft_strlen(s)) && index >= 0)
+		else if ((s[i] == c || i == (size_t)ft_strlen(s)) && index >= 0)
 		{
 			split[j++] = word_dup(s, index, i);
 			index = -1;

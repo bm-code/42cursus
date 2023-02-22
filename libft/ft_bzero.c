@@ -6,13 +6,20 @@
 /*   By: bmorales <benito@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/15 18:22:34 by bmorales          #+#    #+#             */
-/*   Updated: 2023/01/15 21:00:01 by bmorales         ###   ########.fr       */
+/*   Updated: 2023/02/22 11:53:37 by bmorales         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_bzero(void *b, size_t length)
+void	ft_bzero(void *s, size_t n)
 {
-	ft_memset((void *)b, 0, (size_t)length);
+	size_t	i;
+
+	i = 0;
+	while (i < n)
+	{
+	((unsigned char *)s)[i] = 0;
+		i++;
+	}
 }

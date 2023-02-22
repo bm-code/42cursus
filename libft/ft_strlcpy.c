@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bmorales <bmorales@student.42malaga.com>   +#+  +:+       +#+        */
+/*   By: bmorales <benito@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/15 18:41:11 by bmorales          #+#    #+#             */
-/*   Updated: 2023/01/15 18:47:34 by bmorales         ###   ########.fr       */
+/*   Updated: 2023/02/22 12:04:27 by bmorales         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
+size_t	ft_strlcpy(char *dest, const char *src, size_t destsize)
 {
 	size_t	i;
 	size_t	srcsize;
@@ -21,17 +21,17 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	srcsize = 0;
 	while (src[srcsize])
 		srcsize++;
-	if (dstsize)
+	if (destsize)
 	{
-		while (i < srcsize && i < dstsize)
+		while (i < srcsize && i < destsize)
 		{
-			dst[i] = src[i];
+			dest[i] = src[i];
 			i++;
 		}
-		if (dstsize > srcsize)
-			dst[srcsize] = 0;
+		if (destsize > srcsize)
+			dest[srcsize] = 0;
 		else
-			dst[dstsize - 1] = 0;
+			dest[destsize - 1] = 0;
 	}
 	return (srcsize);
 }
